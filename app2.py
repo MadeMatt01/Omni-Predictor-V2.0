@@ -11,7 +11,7 @@ from datetime import timedelta
 MY_RAPID_KEY = "df22d5b81cmsh696779713ca2b88p1b2cadjsnf3cb1bdd491e"
 MY_HOST = "api-football-v1.p.rapidapi.com" 
 
-st.set_page_config(page_title="Omni-Predictor v26.2 Platinum", layout="wide", page_icon="🏆")
+st.set_page_config(page_title="Omni-Predictor v2.0", layout="wide", page_icon="🏆")
 
 # --- CUSTOM NEON CSS ---
 st.markdown("""<style>
@@ -81,17 +81,17 @@ def run_simulation(h_pwr, a_pwr, sport):
 
 # --- SIDEBAR CONTROL ---
 with st.sidebar:
-    st.title("🕹️ OMNI CONTROL")
+    st.title("🕹️ COMMAND CENTER")
     sport = st.selectbox("Select Sport", ["Football", "Basketball", "Rugby", "Tennis", "American Football"])
     t1_name = st.text_input("Home / Player 1", "Manchester City")
-    t2_name = st.text_input("Away / Player 2", "Las Palmas")
+    t2_name = st.text_input("Away / Player 2", "Real Madrid")
     
     line_map = {"Football": 2.5, "Basketball": 216.5, "Rugby": 44.5, "Tennis": 21.5, "American Football": 46.5}
     m_line = st.number_input("Main O/U Line", value=line_map[sport])
     analyze = st.button("🔥 RUN PLATINUM SIMULATION")
 
 # --- MAIN DASHBOARD ---
-st.title(f"🏆 Omni-Predictor v26.2 Platinum")
+st.title(f"🏆 Omni-Predictor v2.0")
 
 if analyze:
     with st.spinner("Executing Global Scout & Monte Carlo Engine..."):
@@ -187,7 +187,7 @@ st.markdown("""<div class='footer-warning'>
     ⚠️ <b>DISCLAIMER:</b> Analytical Monte Carlo simulations for 2026. Sports results are highly volatile. 
     <b>For informational use only.</b>
     </div>""", unsafe_allow_html=True)
-st.caption("Omni-Predictor v26.2 Platinum | League-Aware | Multi-Sport Math")
+st.caption("Omni-Predictor v2.0 | League-Aware | Multi-Sport Math")
 
 
 
