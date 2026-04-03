@@ -1,4 +1,7 @@
 import streamlit as st
+# This must be the first Streamlit command in every page file
+st.set_page_config(page_title="Omni-SubPage", layout="wide")
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,8 +9,6 @@ import seaborn as sns
 from scipy.stats import poisson
 from datetime import timedelta
 
-# This must be the first Streamlit command in every page file
-st.set_page_config(page_title="Omni-SubPage", layout="wide")
 # --- CONFIG ---
 st.set_page_config(page_title="Omni-Predictor v2.0", layout="wide", page_icon="🏆")
 
